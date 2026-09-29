@@ -1,0 +1,3605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Small Giant Inv CC | One Vision • Many Services</title>
+
+<style>
+
+/* =========================================================
+   SMALL GIANT INV CC
+   MAIN WEBSITE
+   EASY EDIT VERSION
+   ========================================================= */
+
+/* ---------- BASIC SETTINGS ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --gold:#ffd21c;
+    --gold2:#ffb800;
+    --yellow:#ffe45c;
+    --black:#050505;
+    --dark:#0b0b0b;
+    --dark2:#111111;
+    --card:#151515;
+    --white:#ffffff;
+    --gray:#bcbcbc;
+    --line:#332900;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050505;
+    color:white;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+    width:9px;
+}
+
+::-webkit-scrollbar-track{
+    background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--gold);
+    border-radius:20px;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    z-index:1000;
+    background:rgba(0,0,0,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--gold);
+}
+
+.navbar{
+    max-width:1250px;
+    height:100%;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-mark{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:2px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    font-weight:900;
+    color:var(--gold);
+    box-shadow:0 0 20px rgba(255,210,28,.25);
+}
+
+.logo-text{
+    line-height:1;
+}
+
+.logo-text strong{
+    display:block;
+    font-size:19px;
+    color:var(--gold);
+    letter-spacing:1px;
+}
+
+.logo-text span{
+    display:block;
+    font-size:10px;
+    color:white;
+    letter-spacing:3px;
+    margin-top:4px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.nav-btn{
+    background:var(--gold);
+    color:#000;
+    padding:12px 19px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.nav-btn:hover{
+    background:white !important;
+    color:#000 !important;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:var(--gold);
+    cursor:pointer;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    min-height:100vh;
+    padding:150px 7% 90px;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at 80% 30%,rgba(255,210,28,.15),transparent 30%),
+        radial-gradient(circle at 10% 80%,rgba(255,184,0,.08),transparent 30%),
+        #050505;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,210,28,.025) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,210,28,.025) 1px,transparent 1px);
+    background-size:50px 50px;
+}
+
+.hero-content{
+    max-width:1250px;
+    margin:auto;
+    width:100%;
+    position:relative;
+    z-index:2;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:9px 17px;
+    border:1px solid var(--gold);
+    color:var(--gold);
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,7vw,92px);
+    line-height:.9;
+    text-transform:uppercase;
+    font-weight:1000;
+    letter-spacing:-4px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+    text-shadow:0 0 25px rgba(255,210,28,.25);
+}
+
+.hero h2{
+    margin-top:25px;
+    color:#eee;
+    font-size:21px;
+}
+
+.hero p{
+    color:#aaa;
+    max-width:650px;
+    margin-top:18px;
+    line-height:1.7;
+    font-size:16px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.btn{
+    padding:14px 24px;
+    border-radius:30px;
+    font-weight:bold;
+    border:1px solid var(--gold);
+    cursor:pointer;
+    transition:.3s;
+    display:inline-block;
+}
+
+.btn-gold{
+    background:var(--gold);
+    color:#000;
+}
+
+.btn-outline{
+    background:transparent;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 30px rgba(255,210,28,.2);
+}
+
+/* HERO VISUAL */
+
+.hero-visual{
+    min-height:480px;
+    border:1px solid rgba(255,210,28,.5);
+    border-radius:30px;
+    position:relative;
+    overflow:hidden;
+    background:
+        linear-gradient(145deg,rgba(255,210,28,.14),rgba(0,0,0,.9)),
+        #111;
+    box-shadow:0 0 50px rgba(255,210,28,.08);
+}
+
+.hero-visual::before{
+    content:"SG";
+    position:absolute;
+    font-size:250px;
+    font-weight:1000;
+    color:rgba(255,210,28,.035);
+    top:60px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.hero-circle{
+    position:absolute;
+    width:280px;
+    height:280px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    top:90px;
+    left:50%;
+    transform:translateX(-50%);
+    animation:spin 20s linear infinite;
+}
+
+.hero-circle::before,
+.hero-circle::after{
+    content:"";
+    position:absolute;
+    inset:25px;
+    border:1px dashed rgba(255,210,28,.6);
+    border-radius:50%;
+}
+
+.hero-center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.hero-center .big-sg{
+    font-size:100px;
+    font-weight:1000;
+    color:var(--gold);
+    line-height:.8;
+}
+
+.hero-center p{
+    color:white;
+    margin:15px 0 0;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.float-card{
+    position:absolute;
+    background:rgba(10,10,10,.92);
+    border:1px solid rgba(255,210,28,.5);
+    padding:13px 17px;
+    border-radius:14px;
+    font-weight:bold;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+
+.float-card span{
+    color:var(--gold);
+}
+
+.card1{top:35px;left:25px;}
+.card2{top:45px;right:25px;}
+.card3{bottom:40px;left:30px;}
+.card4{bottom:30px;right:25px;}
+
+@keyframes spin{
+    from{transform:translateX(-50%) rotate(0deg);}
+    to{transform:translateX(-50%) rotate(360deg);}
+}
+
+/* ---------- GENERAL ---------- */
+
+section{
+    padding:90px 6%;
+}
+
+.section-container{
+    max-width:1250px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title small{
+    color:var(--gold);
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-top:10px;
+}
+
+.section-title h2 span{
+    color:var(--gold);
+}
+
+.section-title p{
+    color:#999;
+    max-width:650px;
+    margin:15px auto 0;
+    line-height:1.6;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about{
+    background:#080808;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about-box{
+    padding:35px;
+    border:1px solid #2d2600;
+    border-radius:20px;
+    background:linear-gradient(145deg,#141414,#090909);
+}
+
+.about-box h3{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.about-box h3 span{
+    color:var(--gold);
+}
+
+.about-box p{
+    color:#aaa;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.about-highlight{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-top:25px;
+}
+
+.highlight{
+    padding:20px;
+    border:1px solid #302900;
+    border-radius:15px;
+}
+
+.highlight strong{
+    display:block;
+    color:var(--gold);
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+.highlight span{
+    color:#aaa;
+    font-size:13px;
+}
+
+.about-visual{
+    min-height:430px;
+    border-radius:25px;
+    border:1px solid var(--gold);
+    background:
+        radial-gradient(circle at 50% 50%,rgba(255,210,28,.2),transparent 35%),
+        linear-gradient(145deg,#181818,#050505);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.about-visual h3{
+    font-size:90px;
+    color:var(--gold);
+    font-weight:1000;
+    text-shadow:10px 10px 0 #222;
+}
+
+.about-visual p{
+    position:absolute;
+    bottom:35px;
+    letter-spacing:4px;
+    color:#fff;
+}
+
+/* ---------- SERVICES ---------- */
+
+.services{
+    background:#050505;
+}
+
+.service-filter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:40px;
+}
+
+.filter-btn{
+    background:#111;
+    color:#ccc;
+    border:1px solid #333;
+    padding:10px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:var(--gold);
+    color:#000;
+    border-color:var(--gold);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service-card{
+    background:linear-gradient(145deg,#171717,#0b0b0b);
+    border:1px solid #343434;
+    border-radius:18px;
+    padding:25px;
+    min-height:260px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.service-card::after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    background:var(--gold);
+    filter:blur(70px);
+    opacity:.08;
+    right:-30px;
+    bottom:-30px;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    border-color:var(--gold);
+    box-shadow:0 20px 40px rgba(0,0,0,.5);
+}
+
+.service-icon{
+    width:60px;
+    height:60px;
+    border:1px solid var(--gold);
+    border-radius:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:20px;
+    margin-bottom:9px;
+}
+
+.service-card h3 span{
+    color:var(--gold);
+}
+
+.service-card p{
+    color:#999;
+    font-size:13px;
+    line-height:1.6;
+}
+
+.service-card ul{
+    list-style:none;
+    margin-top:15px;
+}
+
+.service-card li{
+    color:#bbb;
+    font-size:12px;
+    margin:7px 0;
+}
+
+.service-card li::before{
+    content:"✓";
+    color:var(--gold);
+    margin-right:8px;
+}
+
+.service-open{
+    display:inline-block;
+    margin-top:18px;
+    color:var(--gold);
+    font-size:13px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ---------- DIVISION SECTIONS ---------- */
+
+.division{
+    background:#090909;
+    border-top:1px solid #171717;
+}
+
+.division:nth-child(even){
+    background:#050505;
+}
+
+.division-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:30px;
+    margin-bottom:35px;
+}
+
+.division-header h2{
+    font-size:42px;
+}
+
+.division-header h2 span{
+    color:var(--gold);
+}
+
+.division-header p{
+    max-width:500px;
+    color:#999;
+    line-height:1.6;
+}
+
+.division-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:25px;
+}
+
+.division-main{
+    min-height:360px;
+    border:1px solid #3b3200;
+    border-radius:25px;
+    padding:35px;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(255,210,28,.13),transparent 30%),
+        #111;
+}
+
+.division-main h3{
+    font-size:32px;
+    color:var(--gold);
+}
+
+.division-main p{
+    color:#aaa;
+    line-height:1.7;
+    margin-top:15px;
+    max-width:650px;
+}
+
+.product-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:25px;
+}
+
+.product{
+    border:1px solid #2d2d2d;
+    padding:15px;
+    border-radius:12px;
+    background:#0b0b0b;
+}
+
+.product strong{
+    display:block;
+    color:white;
+}
+
+.product span{
+    color:var(--gold);
+    font-size:13px;
+}
+
+.division-side{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.side-box{
+    border:1px solid #2d2d2d;
+    border-radius:20px;
+    padding:25px;
+    background:#101010;
+}
+
+.side-box .icon{
+    font-size:35px;
+}
+
+.side-box h4{
+    margin-top:12px;
+    color:var(--gold);
+}
+
+.side-box p{
+    color:#888;
+    font-size:13px;
+    line-height:1.5;
+    margin-top:8px;
+}
+
+/* ---------- GALLERY ---------- */
+
+.gallery{
+    background:#080808;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.gallery-item{
+    height:230px;
+    border:1px solid #302900;
+    border-radius:15px;
+    background:
+        linear-gradient(145deg,rgba(255,210,28,.15),rgba(0,0,0,.8)),
+        #151515;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.gallery-item:hover{
+    border-color:var(--gold);
+    transform:scale(1.02);
+}
+
+.gallery-item strong{
+    font-size:22px;
+    color:var(--gold);
+}
+
+.gallery-item small{
+    display:block;
+    color:#aaa;
+    margin-top:7px;
+}
+
+/*
+TO ADD YOUR REAL IMAGES:
+
+Replace a gallery item's background with:
+
+background-image:url("images/your-picture.jpg");
+background-size:cover;
+background-position:center;
+
+*/
+
+/* ---------- WHY US ---------- */
+
+.why{
+    background:#050505;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    text-align:center;
+    padding:30px 20px;
+    border:1px solid #292929;
+    border-radius:18px;
+    background:#101010;
+}
+
+.why-card .icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:#888;
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact{
+    background:
+        radial-gradient(circle at 50% 0%,rgba(255,210,28,.1),transparent 35%),
+        #080808;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-box{
+    padding:35px;
+    border:1px solid #3a3100;
+    border-radius:22px;
+    background:#101010;
+}
+
+.contact-box h3{
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.contact-box h3 span{
+    color:var(--gold);
+}
+
+.contact-item{
+    display:flex;
+    gap:15px;
+    align-items:center;
+    padding:17px 0;
+    border-bottom:1px solid #222;
+}
+
+.contact-item:last-child{
+    border-bottom:0;
+}
+
+.contact-item .icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:var(--gold);
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+
+.contact-item small{
+    display:block;
+    color:#777;
+    margin-bottom:4px;
+}
+
+.contact-item strong{
+    color:#fff;
+}
+
+.contact-form{
+    display:grid;
+    gap:13px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+    width:100%;
+    background:#080808;
+    color:white;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:15px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+    border-color:var(--gold);
+}
+
+.contact-form textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    background:#030303;
+    border-top:1px solid var(--gold);
+    padding:50px 6% 25px;
+}
+
+.footer-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:var(--gold);
+    margin-bottom:17px;
+}
+
+footer p,
+footer li{
+    color:#777;
+    font-size:13px;
+    line-height:1.8;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li:hover{
+    color:var(--gold);
+    cursor:pointer;
+}
+
+.socials{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+.social{
+    width:38px;
+    height:38px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--gold);
+    font-weight:bold;
+}
+
+.footer-bottom{
+    max-width:1250px;
+    margin:40px auto 0;
+    padding-top:20px;
+    border-top:1px solid #1d1d1d;
+    text-align:center;
+    color:#555;
+    font-size:12px;
+}
+
+/* ---------- FLOATING WHATSAPP ---------- */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    z-index:900;
+    box-shadow:0 10px 30px rgba(0,0,0,.5);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.08);}
+}
+
+/* ---------- MODAL ---------- */
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(10px);
+    z-index:2000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    width:min(700px,100%);
+    max-height:90vh;
+    overflow-y:auto;
+    background:#111;
+    border:1px solid var(--gold);
+    border-radius:25px;
+    padding:35px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:30px;
+    color:var(--gold);
+    cursor:pointer;
+}
+
+.modal-content h2{
+    color:var(--gold);
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.modal-content p{
+    color:#aaa;
+    line-height:1.7;
+}
+
+.modal-list{
+    margin-top:20px;
+    list-style:none;
+}
+
+.modal-list li{
+    padding:10px;
+    border-bottom:1px solid #252525;
+    color:#ccc;
+}
+
+.modal-list li::before{
+    content:"✓ ";
+    color:var(--gold);
+}
+
+/* ---------- SEARCH ---------- */
+
+.search-box{
+    max-width:600px;
+    margin:0 auto 30px;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    background:#111;
+    color:white;
+    border:1px solid #333;
+    border-radius:30px;
+    padding:16px 20px;
+    outline:none;
+}
+
+.search-box input:focus{
+    border-color:var(--gold);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media(max-width:1000px){
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-grid,
+    .about-grid,
+    .division-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-visual{
+        min-height:400px;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:750px){
+
+    header{
+        height:70px;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#080808;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        padding:20px;
+        border-bottom:1px solid var(--gold);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:13px;
+        border-bottom:1px solid #222;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-btn{
+        text-align:center;
+    }
+
+    .hero{
+        padding:120px 6% 70px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .division-header{
+        flex-direction:column;
+        align-items:start;
+    }
+
+    .division-header h2{
+        font-size:35px;
+    }
+
+    .division-side{
+        grid-template-columns:1fr;
+    }
+
+    .product-list{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .section-title h2{
+        font-size:34px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ======================================================
+     NAVIGATION
+     ====================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+    <a href="#home" class="logo">
+
+        <div class="logo-mark">SG</div>
+
+        <div class="logo-text">
+            <strong>SMALL GIANT</strong>
+            <span>INV CC</span>
+        </div>
+
+    </a>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#why">Why SG?</a>
+        <a href="#contact">Contact</a>
+
+        <a href="#contact" class="nav-btn">
+            Request Service
+        </a>
+
+    </div>
+
+</nav>
+
+</header>
+
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="hero-grid">
+
+<div>
+
+<span class="badge">
+SMALL GIANT INV CC
+</span>
+
+<h1>
+ONE <span>VISION.</span><br>
+MANY <span>SERVICES.</span>
+</h1>
+
+<h2>
+Bigger Dreams. Bigger Possibilities.
+</h2>
+
+<p>
+Welcome to Small Giant Inv CC, a growing multi-service
+business bringing food, digital solutions, fashion,
+photography, cleaning, fragrances, tutoring and
+everyday products together under one brand.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#services" class="btn btn-gold">
+EXPLORE OUR SERVICES
+</a>
+
+<a href="https://wa.me/264858151809" class="btn btn-outline">
+💬 WHATSAPP US
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-visual">
+
+<div class="hero-circle"></div>
+
+<div class="hero-center">
+
+<div class="big-sg">SG</div>
+
+<p>SMALL GIANT INV CC</p>
+
+</div>
+
+<div class="float-card card1">
+🍔 <span>Food</span>
+</div>
+
+<div class="float-card card2">
+💻 <span>Digital</span>
+</div>
+
+<div class="float-card card3">
+👕 <span>Brands</span>
+</div>
+
+<div class="float-card card4">
+📸 <span>Creative</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     ABOUT
+     ====================================================== -->
+
+<section class="about" id="about">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<small>GET TO KNOW US</small>
+
+<h2>
+ABOUT <span>SMALL GIANT</span>
+</h2>
+
+<p>
+More than one business. One growing vision.
+</p>
+
+</div>
+
+
+<div class="about-grid">
+
+<div class="about-box">
+
+<h3>
+Who is <span>Small Giant?</span>
+</h3>
+
+<p>
+Small Giant Inv CC is an all-in-one business concept
+built around providing different products and services
+under one recognizable brand.
+</p>
+
+<p>
+From food and fashion to digital work, photography,
+cleaning, fragrances, tutoring and buying & selling,
+Small Giant brings different solutions together.
+</p>
+
+<p>
+Our goal is simple: create useful services, build strong
+brands and grow opportunities while keeping our services
+accessible to everyday customers.
+</p>
+
+
+<div class="about-highlight">
+
+<div class="highlight">
+<strong>ONE</strong>
+<span>Company</span>
+</div>
+
+<div class="highlight">
+<strong>MANY</strong>
+<span>Services</span>
+</div>
+
+<div class="highlight">
+<strong>BIG</strong>
+<span>Dreams</span>
+</div>
+
+<div class="highlight">
+<strong>SG</strong>
+<span>Brand</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="about-visual">
+
+<h3>SG</h3>
+
+<p>
+ONE VISION • MANY SERVICES
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SERVICES
+     ====================================================== -->
+
+<section class="services" id="services">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<small>WHAT WE DO</small>
+
+<h2>
+OUR <span>SERVICES</span>
+</h2>
+
+<p>
+Choose a division below to explore what Small Giant offers.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="🔎 Search services..."
+onkeyup="searchServices()">
+
+</div>
+
+
+<div class="service-filter">
+
+<button class="filter-btn active" onclick="filterServices('all',this)">
+All
+</button>
+
+<button class="filter-btn" onclick="filterServices('food',this)">
+🍔 Food
+</button>
+
+<button class="filter-btn" onclick="filterServices('digital',this)">
+💻 Digital
+</button>
+
+<button class="filter-btn" onclick="filterServices('fashion',this)">
+👕 Fashion
+</button>
+
+<button class="filter-btn" onclick="filterServices('creative',this)">
+📸 Creative
+</button>
+
+<button class="filter-btn" onclick="filterServices('home',this)">
+🏠 Home
+</button>
+
+<button class="filter-btn" onclick="filterServices('education',this)">
+🎓 Education
+</button>
+
+</div>
+
+
+<div class="services-grid" id="servicesGrid">
+
+
+<!-- FOOD -->
+
+<div class="service-card" data-category="food">
+
+<div class="service-icon">🍔</div>
+
+<h3>
+SG <span>Munchizz</span>
+</h3>
+
+<p>
+Food division serving affordable snacks,
+rolls, hotdogs, sweets and refreshments.
+</p>
+
+<ul>
+<li>SG Chip Rolls</li>
+<li>Hotdogs & Rolls</li>
+<li>Drinks & Sweets</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('munchizz')">
+Explore Division →
+</span>
+
+</div>
+
+
+<!-- DIGITAL -->
+
+<div class="service-card" data-category="digital">
+
+<div class="service-icon">💻</div>
+
+<h3>
+SG <span>Digital</span>
+</h3>
+
+<p>
+Creative digital and printing solutions
+for individuals and businesses.
+</p>
+
+<ul>
+<li>Website Design</li>
+<li>CVs & Documents</li>
+<li>Posters & Printing</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('digital')">
+Explore Division →
+</span>
+
+</div>
+
+
+<!-- BRANDS -->
+
+<div class="service-card" data-category="fashion">
+
+<div class="service-icon">👕</div>
+
+<h3>
+SG <span>Brands</span>
+</h3>
+
+<p>
+SG clothing and lifestyle products
+for people who want to represent the brand.
+</p>
+
+<ul>
+<li>Caps</li>
+<li>Shirts</li>
+<li>Tracksuits & Accessories</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('brands')">
+Explore Division →
+</span>
+
+</div>
+
+
+<!-- PHOTOGRAPHY -->
+
+<div class="service-card" data-category="creative">
+
+<div class="service-icon">📸</div>
+
+<h3>
+SG <span>Photography</span>
+</h3>
+
+<p>
+Photography and picture editing services
+for personal and creative projects.
+</p>
+
+<ul>
+<li>Photoshoots</li>
+<li>Picture Editing</li>
+<li>Kasi Specials</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('photo')">
+Explore Division →
+</span>
+
+</div>
+
+
+<!-- BUY SELL -->
+
+<div class="service-card" data-category="fashion">
+
+<div class="service-icon">🛒</div>
+
+<h3>
+SG <span>Buy & Sell</span>
+</h3>
+
+<p>
+A marketplace for useful products,
+electronics, clothing and general items.
+</p>
+
+<ul>
+<li>Phones</li>
+<li>Electronics</li>
+<li>Clothing & More</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('buysell')">
+Explore Division →
+</span>
+
+</div>
+
+
+<!-- CLEANING -->
+
+<div class="service-card" data-category="home">
+
+<div class="service-icon">🧹</div>
+
+<h3>
+SG <span>Cleaning</span>
+</h3>
+
+<p>
+Cleaning solutions for homes, offices,
+cars and selected household items.
+</p>
+
+<ul>
+<li>Home Cleaning</li>
+<li>Office Cleaning</li>
+<li>Carwash</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('cleaning')">
+Explore Division →
+</span>
+
+</div>
+
+
+<!-- FRAGRANCES -->
+
+<div class="service-card" data-category="fashion">
+
+<div class="service-icon">🌸</div>
+
+<h3>
+SG <span>Fragrances</span>
+</h3>
+
+<p>
+Affordable fragrances and perfume options
+for everyday use.
+</p>
+
+<ul>
+<li>Roll-ons</li>
+<li>100ml Perfumes</li>
+<li>Perfume Combos</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('fragrance')">
+Explore Division →
+</span>
+
+</div>
+
+
+<!-- TUTORING -->
+
+<div class="service-card" data-category="education">
+
+<div class="service-icon">👨‍💻</div>
+
+<h3>
+SG <span>Tutoring</span>
+</h3>
+
+<p>
+Learning support focused on computer
+skills and web development.
+</p>
+
+<ul>
+<li>HTML</li>
+<li>Web Development</li>
+<li>Computer Basics</li>
+</ul>
+
+<span class="service-open"
+onclick="openModal('tutoring')">
+Explore Division →
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SG MUNCHIZZ
+     ====================================================== -->
+
+<section class="division" id="munchizz">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+FOOD DIVISION
+</small>
+
+<h2>
+SG <span>Munchizz</span>
+</h2>
+
+</div>
+
+<p>
+Good Food • Good Vibes • Affordable Prices
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>🍔 SG Munchizz Food Palace</h3>
+
+<p>
+Our food division brings affordable, tasty food
+and snacks together. Customize your food and
+choose what works for you.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>SG Chip Roll</strong>
+<span>From N$15</span>
+</div>
+
+<div class="product">
+<strong>SG Hotdog</strong>
+<span>From N$15</span>
+</div>
+
+<div class="product">
+<strong>Long Polony</strong>
+<span>N$20</span>
+</div>
+
+<div class="product">
+<strong>Refreshments</strong>
+<span>From N$10</span>
+</div>
+
+<div class="product">
+<strong>Gummy Sweets</strong>
+<span>From N$2</span>
+</div>
+
+<div class="product">
+<strong>SG Rolls</strong>
+<span>From N$15</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#contact" class="btn btn-gold">
+ORDER / ASK FOR MENU
+</a>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">🌭</div>
+<h4>Hotdogs</h4>
+<p>Different toppings and styles.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🍟</div>
+<h4>Chips</h4>
+<p>Warm chips with your meal.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🥤</div>
+<h4>Drinks</h4>
+<p>Cool refreshments.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🍬</div>
+<h4>Sweets</h4>
+<p>Sweet treats and snacks.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SG DIGITAL
+     ====================================================== -->
+
+<section class="division" id="digital">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+DIGITAL DIVISION
+</small>
+
+<h2>
+SG <span>Digital</span>
+</h2>
+
+</div>
+
+<p>
+Design • Print • Create • Grow
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>💻 SG Digital Studio</h3>
+
+<p>
+Turning ideas into powerful visuals and practical
+digital solutions for individuals, students and businesses.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>Logo Design</strong>
+<span>Custom Branding</span>
+</div>
+
+<div class="product">
+<strong>Website Design</strong>
+<span>Modern Websites</span>
+</div>
+
+<div class="product">
+<strong>CV Design</strong>
+<span>Professional CVs</span>
+</div>
+
+<div class="product">
+<strong>Posters</strong>
+<span>Social Media Designs</span>
+</div>
+
+<div class="product">
+<strong>Business Profiles</strong>
+<span>Company Branding</span>
+</div>
+
+<div class="product">
+<strong>Printing</strong>
+<span>Documents & Designs</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#contact" class="btn btn-gold">
+REQUEST DIGITAL SERVICE
+</a>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">🎨</div>
+<h4>Design</h4>
+<p>Creative visual designs.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🖨️</div>
+<h4>Printing</h4>
+<p>Printing and document services.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🌐</div>
+<h4>Websites</h4>
+<p>Websites for businesses and projects.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">📄</div>
+<h4>Documents</h4>
+<p>CVs, profiles and document work.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     SG BRANDS
+     ====================================================== -->
+
+<section class="division" id="brands">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+FASHION DIVISION
+</small>
+
+<h2>
+SG <span>Brands</span>
+</h2>
+
+</div>
+
+<p>
+Wear It • Own It • Represent SG
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>👕 SG Bennie's & Exclusive Wear</h3>
+
+<p>
+SG branded clothing and accessories for people
+who want to represent the Small Giant lifestyle.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>SG Bennie's</strong>
+<span>N$100</span>
+</div>
+
+<div class="product">
+<strong>Caps</strong>
+<span>N$150</span>
+</div>
+
+<div class="product">
+<strong>Floppies</strong>
+<span>N$200</span>
+</div>
+
+<div class="product">
+<strong>Tracksuits</strong>
+<span>N$600</span>
+</div>
+
+<div class="product">
+<strong>SG Ties</strong>
+<span>N$70</span>
+</div>
+
+<div class="product">
+<strong>Gloves</strong>
+<span>N$60</span>
+</div>
+
+<div class="product">
+<strong>Shirts</strong>
+<span>N$200</span>
+</div>
+
+<div class="product">
+<strong>Socks</strong>
+<span>N$55</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">🧢</div>
+<h4>Caps</h4>
+<p>SG branded caps.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">👕</div>
+<h4>Shirts</h4>
+<p>SG exclusive clothing.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🧥</div>
+<h4>Tracksuits</h4>
+<p>Complete SG looks.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🧦</div>
+<h4>Accessories</h4>
+<p>Socks, gloves and more.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     PHOTOGRAPHY
+     ====================================================== -->
+
+<section class="division" id="photography">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+CREATIVE DIVISION
+</small>
+
+<h2>
+SG <span>Photography</span>
+</h2>
+
+</div>
+
+<p>
+Capture The Moment
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>📸 SG Photography</h3>
+
+<p>
+Photography services for portraits, personal projects,
+events and creative shoots.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>Photoshoots</strong>
+<span>Contact for quote</span>
+</div>
+
+<div class="product">
+<strong>Edited Pictures</strong>
+<span>Professional editing</span>
+</div>
+
+<div class="product">
+<strong>Raw Pictures</strong>
+<span>Available on request</span>
+</div>
+
+<div class="product">
+<strong>Kasi Specials</strong>
+<span>From N$50</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">📷</div>
+<h4>Portraits</h4>
+<p>Personal photoshoots.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🎨</div>
+<h4>Editing</h4>
+<p>Picture enhancement and edits.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">📸</div>
+<h4>Events</h4>
+<p>Event photography.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">✨</div>
+<h4>Creative</h4>
+<p>Creative photo concepts.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     BUY & SELL
+     ====================================================== -->
+
+<section class="division" id="buysell">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+MARKETPLACE DIVISION
+</small>
+
+<h2>
+SG <span>Buy & Sell</span>
+</h2>
+
+</div>
+
+<p>
+Quality Deals • Real People
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>🛒 SG Marketplace</h3>
+
+<p>
+A space for buying and selling useful products.
+Listings can include electronics, clothing,
+phones, laptops and general items.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>📱 Phones</strong>
+<span>Buy & Sell</span>
+</div>
+
+<div class="product">
+<strong>💻 Laptops</strong>
+<span>Buy & Sell</span>
+</div>
+
+<div class="product">
+<strong>🎧 Electronics</strong>
+<span>Buy & Sell</span>
+</div>
+
+<div class="product">
+<strong>👟 Clothes</strong>
+<span>Buy & Sell</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#contact" class="btn btn-gold">
+ASK ABOUT A LISTING
+</a>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">📱</div>
+<h4>Phones</h4>
+<p>Phone listings.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">💻</div>
+<h4>Electronics</h4>
+<p>Devices and accessories.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">👟</div>
+<h4>Clothing</h4>
+<p>Fashion items.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🛍️</div>
+<h4>General</h4>
+<p>Other useful products.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CLEANING
+     ====================================================== -->
+
+<section class="division" id="cleaning">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+SERVICE DIVISION
+</small>
+
+<h2>
+SG <span>Cleaning</span>
+</h2>
+
+</div>
+
+<p>
+We Clean Your Dirt
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>🧹 SG Cleaning Services</h3>
+
+<p>
+Cleaning solutions for homes, offices and selected
+household and vehicle cleaning needs.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>🏠 Homes</strong>
+<span>Cleaning service</span>
+</div>
+
+<div class="product">
+<strong>🏢 Offices</strong>
+<span>Cleaning service</span>
+</div>
+
+<div class="product">
+<strong>🛋️ Carpets</strong>
+<span>Cleaning service</span>
+</div>
+
+<div class="product">
+<strong>🛏️ Mattresses</strong>
+<span>Cleaning service</span>
+</div>
+
+<div class="product">
+<strong>🪟 Windows</strong>
+<span>Cleaning service</span>
+</div>
+
+<div class="product">
+<strong>🚗 Carwash</strong>
+<span>Vehicle cleaning</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#contact" class="btn btn-gold">
+BOOK CLEANING
+</a>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">🏠</div>
+<h4>Homes</h4>
+<p>Home cleaning.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🏢</div>
+<h4>Offices</h4>
+<p>Office cleaning.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🚗</div>
+<h4>Carwash</h4>
+<p>Vehicle cleaning.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">✨</div>
+<h4>More</h4>
+<p>Ask about available services.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FRAGRANCES
+     ====================================================== -->
+
+<section class="division" id="fragrances">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+FRAGRANCE DIVISION
+</small>
+
+<h2>
+SG <span>Fragrances</span>
+</h2>
+
+</div>
+
+<p>
+Smell Good • Feel Good
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>🌸 SG Munchizz Fragrances</h3>
+
+<p>
+Affordable fragrances for everyday wear,
+including individual perfumes and combo options.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>100ml Perfume</strong>
+<span>N$150</span>
+</div>
+
+<div class="product">
+<strong>2 × 100ml Combo</strong>
+<span>N$280</span>
+</div>
+
+<div class="product">
+<strong>Roll-ons</strong>
+<span>Contact for price</span>
+</div>
+
+<div class="product">
+<strong>Other Sizes</strong>
+<span>Contact for availability</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#contact" class="btn btn-gold">
+ASK ABOUT FRAGRANCES
+</a>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">🌸</div>
+<h4>Perfumes</h4>
+<p>Different fragrances.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">💎</div>
+<h4>Combos</h4>
+<p>Multiple fragrance options.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">✨</div>
+<h4>Everyday</h4>
+<p>Scents for daily use.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🎁</div>
+<h4>Gifts</h4>
+<p>Ask about available options.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     TUTORING
+     ====================================================== -->
+
+<section class="division" id="tutoring">
+
+<div class="section-container">
+
+<div class="division-header">
+
+<div>
+
+<small style="color:#ffd21c;">
+EDUCATION DIVISION
+</small>
+
+<h2>
+SG <span>Tutoring</span>
+</h2>
+
+</div>
+
+<p>
+Learn • Build • Create
+</p>
+
+</div>
+
+
+<div class="division-grid">
+
+<div class="division-main">
+
+<h3>👨‍💻 SG Tutoring</h3>
+
+<p>
+Learning support focused on computer skills,
+basic web development and HTML.
+</p>
+
+<div class="product-list">
+
+<div class="product">
+<strong>HTML Basics</strong>
+<span>Beginner</span>
+</div>
+
+<div class="product">
+<strong>HTML Advanced</strong>
+<span>Intermediate</span>
+</div>
+
+<div class="product">
+<strong>Web Development</strong>
+<span>Practical learning</span>
+</div>
+
+<div class="product">
+<strong>Computer Basics</strong>
+<span>Beginner support</span>
+</div>
+
+</div>
+
+<br>
+
+<a href="#contact" class="btn btn-gold">
+ASK ABOUT TUTORING
+</a>
+
+</div>
+
+
+<div class="division-side">
+
+<div class="side-box">
+<div class="icon">💻</div>
+<h4>HTML</h4>
+<p>Learn website structure.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🌐</div>
+<h4>Web Design</h4>
+<p>Build websites.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🖥️</div>
+<h4>Computer Skills</h4>
+<p>Practical computer skills.</p>
+</div>
+
+<div class="side-box">
+<div class="icon">🚀</div>
+<h4>Projects</h4>
+<p>Learn through projects.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     GALLERY
+     ====================================================== -->
+
+<section class="gallery" id="gallery">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<small>SEE WHAT WE DO</small>
+
+<h2>
+SG <span>GALLERY</span>
+</h2>
+
+<p>
+A showcase area for your food, products, designs,
+fashion, photography and projects.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<div>
+<strong>🍔 SG Munchizz</strong>
+<small>Food & Snacks</small>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<strong>💻 SG Digital</strong>
+<small>Design & Printing</small>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<strong>👕 SG Brands</strong>
+<small>Fashion & Lifestyle</small>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<strong>📸 Photography</strong>
+<small>Capture The Moment</small>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<strong>🌸 Fragrances</strong>
+<small>Smell Good • Feel Good</small>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<strong>🧹 Cleaning</strong>
+<small>We Clean Your Dirt</small>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<strong>🛒 Buy & Sell</strong>
+<small>Quality Deals</small>
+</div>
+</div>
+
+<div class="gallery-item">
+<div>
+<strong>🚀 SG Projects</strong>
+<small>Big Dreams</small>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     WHY SMALL GIANT
+     ====================================================== -->
+
+<section class="why" id="why">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<small>WHY SG?</small>
+
+<h2>
+WHY CHOOSE <span>SMALL GIANT?</span>
+</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="icon">🎯</div>
+
+<h3>Many Services</h3>
+
+<p>
+Different solutions under one brand.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">💰</div>
+
+<h3>Affordable</h3>
+
+<p>
+Services designed with everyday customers in mind.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">⚡</div>
+
+<h3>Creative</h3>
+
+<p>
+Modern ideas, designs and practical solutions.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="icon">🤝</div>
+
+<h3>Customer Focused</h3>
+
+<p>
+We aim to make every interaction simple and useful.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     CONTACT
+     ====================================================== -->
+
+<section class="contact" id="contact">
+
+<div class="section-container">
+
+<div class="section-title">
+
+<small>LET'S WORK TOGETHER</small>
+
+<h2>
+CONTACT <span>SMALL GIANT</span>
+</h2>
+
+<p>
+Need a product, service, design, food order or quotation?
+Send us a request.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<h3>
+Get In <span>Touch</span>
+</h3>
+
+
+<div class="contact-item">
+
+<div class="icon">📱</div>
+
+<div>
+<small>WhatsApp</small>
+<strong>085 815 1809</strong>
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="icon">☎</div>
+
+<div>
+<small>Phone</small>
+<strong>081 264 3563</strong>
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="icon">✉</div>
+
+<div>
+<small>Email</small>
+<strong>smallgiantinvcc1@gmail.com</strong>
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="icon">📍</div>
+
+<div>
+<small>Location</small>
+<strong>Windhoek, Namibia</strong>
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<div class="icon">📱</div>
+
+<div>
+<small>Social Media</small>
+<strong>@small_giant_2026</strong>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+Request a <span>Service</span>
+</h3>
+
+
+<form class="contact-form" onsubmit="sendWhatsApp(event)">
+
+<input
+type="text"
+id="customerName"
+placeholder="Your name"
+required>
+
+
+<input
+type="text"
+id="customerContact"
+placeholder="Phone / WhatsApp number"
+required>
+
+
+<select id="customerService" required>
+
+<option value="">
+Select a service
+</option>
+
+<option>SG Munchizz</option>
+<option>SG Digital</option>
+<option>SG Brands</option>
+<option>SG Photography</option>
+<option>SG Buy & Sell</option>
+<option>SG Cleaning</option>
+<option>SG Fragrances</option>
+<option>SG Tutoring</option>
+<option>Other</option>
+
+</select>
+
+
+<textarea
+id="customerMessage"
+placeholder="Tell us what you need..."
+required></textarea>
+
+
+<button class="btn btn-gold" type="submit">
+SEND REQUEST ON WHATSAPP
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ======================================================
+     FOOTER
+     ====================================================== -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>SMALL GIANT INV CC</h3>
+
+<p>
+One Vision • Many Services • Bigger Dreams.
+</p>
+
+<p style="margin-top:12px;">
+A growing all-in-one brand bringing different
+products and services together.
+</p>
+
+<div class="socials">
+
+<a class="social" href="#">IG</a>
+<a class="social" href="#">TT</a>
+<a class="social" href="#">FB</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h3>DIVISIONS</h3>
+
+<ul>
+
+<li onclick="location.href='#munchizz'">
+SG Munchizz
+</li>
+
+<li onclick="location.href='#digital'">
+SG Digital
+</li>
+
+<li onclick="location.href='#brands'">
+SG Brands
+</li>
+
+<li onclick="location.href='#photography'">
+SG Photography
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>MORE SERVICES</h3>
+
+<ul>
+
+<li onclick="location.href='#buysell'">
+SG Buy & Sell
+</li>
+
+<li onclick="location.href='#cleaning'">
+SG Cleaning
+</li>
+
+<li onclick="location.href='#fragrances'">
+SG Fragrances
+</li>
+
+<li onclick="location.href='#tutoring'">
+SG Tutoring
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>CONTACT</h3>
+
+<p>📱 085 815 1809</p>
+
+<p>☎ 081 264 3563</p>
+
+<p>✉ smallgiantinvcc1@gmail.com</p>
+
+<p>📍 Windhoek, Namibia</p>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 Small Giant Inv CC.
+All Rights Reserved.
+
+<br><br>
+
+ONE VISION • MANY SERVICES • BIGGER DREAMS
+
+</div>
+
+</footer>
+
+
+<!-- ======================================================
+     WHATSAPP FLOATING BUTTON
+     ====================================================== -->
+
+<a
+class="whatsapp"
+href="https://wa.me/264858151809"
+target="_blank"
+title="Chat with Small Giant">
+
+💬
+
+</a>
+
+
+<!-- ======================================================
+     SERVICE MODAL
+     ====================================================== -->
+
+<div class="modal" id="serviceModal">
+
+<div class="modal-content">
+
+<div class="close" onclick="closeModal()">
+×
+</div>
+
+<h2 id="modalTitle">
+Service
+</h2>
+
+<p id="modalDescription">
+Description
+</p>
+
+<ul class="modal-list" id="modalList">
+</ul>
+
+<br>
+
+<a
+href="#contact"
+onclick="closeModal()"
+class="btn btn-gold">
+
+REQUEST THIS SERVICE
+
+</a>
+
+</div>
+
+</div>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+     ====================================================== -->
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList
+    .toggle("active");
+
+}
+
+
+/* Close mobile menu after clicking a link */
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("navLinks")
+        .classList
+        .remove("active");
+
+    });
+
+});
+
+
+/* =========================================================
+   SERVICE FILTER
+   ========================================================= */
+
+function filterServices(category,button){
+
+    let cards =
+    document.querySelectorAll(".service-card");
+
+    let buttons =
+    document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(function(btn){
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+
+    cards.forEach(function(card){
+
+        if(category === "all"){
+
+            card.style.display = "block";
+
+        }else{
+
+            if(card.dataset.category === category){
+
+                card.style.display = "block";
+
+            }else{
+
+                card.style.display = "none";
+
+            }
+
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   SERVICE SEARCH
+   ========================================================= */
+
+function searchServices(){
+
+    let search =
+    document
+    .getElementById("serviceSearch")
+    .value
+    .toLowerCase();
+
+    let cards =
+    document.querySelectorAll(".service-card");
+
+
+    cards.forEach(function(card){
+
+        let text =
+        card.innerText.toLowerCase();
+
+        if(text.includes(search)){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================================================
+   SERVICE MODAL
+   ========================================================= */
+
+const serviceData = {
+
+munchizz:{
+
+title:"🍔 SG Munchizz",
+
+description:
+"SG Munchizz is the food division of Small Giant, offering affordable food, snacks, refreshments and customizable meals.",
+
+items:[
+"SG Chip Rolls",
+"Hotdogs",
+"SG Rolls",
+"Warm Chips",
+"Refreshments",
+"Sweets"
+]
+
+},
+
+
+digital:{
+
+title:"💻 SG Digital",
+
+description:
+"SG Digital provides creative digital, design and printing solutions for individuals, students and businesses.",
+
+items:[
+"Logo Design",
+"Social Media Posters",
+"Business Flyers",
+"Company Profiles",
+"Business Cards",
+"Website Design",
+"Product Catalogues",
+"Photo Editing",
+"Printing Services",
+"Banners & Signage"
+]
+
+},
+
+
+brands:{
+
+title:"👕 SG Brands",
+
+description:
+"SG Brands is the fashion and lifestyle division of Small Giant.",
+
+items:[
+"SG Bennie's",
+"Caps",
+"Floppies",
+"Tracksuits",
+"Shirts",
+"Socks",
+"Gloves",
+"Ties"
+]
+
+},
+
+
+photo:{
+
+title:"📸 SG Photography",
+
+description:
+"Photography and editing services for portraits, events and creative projects.",
+
+items:[
+"Photoshoots",
+"Edited Pictures",
+"Raw Pictures",
+"Kasi Specials",
+"Creative Photography"
+]
+
+},
+
+
+buysell:{
+
+title:"🛒 SG Buy & Sell",
+
+description:
+"A marketplace division for buying and selling useful products.",
+
+items:[
+"Phones",
+"Electronics",
+"Laptops",
+"Clothing",
+"Shoes",
+"General Items"
+]
+
+},
+
+
+cleaning:{
+
+title:"🧹 SG Cleaning",
+
+description:
+"Cleaning solutions for homes, offices, vehicles and selected household items.",
+
+items:[
+"Home Cleaning",
+"Office Cleaning",
+"Carpets",
+"Mattresses",
+"Windows",
+"Carwash"
+]
+
+},
+
+
+fragrance:{
+
+title:"🌸 SG Fragrances",
+
+description:
+"Affordable fragrance products for everyday use and gifting.",
+
+items:[
+"100ml Perfumes",
+"2 × 100ml Combos",
+"Roll-ons",
+"Other Available Sizes"
+]
+
+},
+
+
+tutoring:{
+
+title:"👨‍💻 SG Tutoring",
+
+description:
+"Learning support focused on computers, HTML and web development.",
+
+items:[
+"HTML Basics",
+"HTML Advanced",
+"Web Development",
+"Computer Basics",
+"Practical Projects"
+]
+
+}
+
+};
+
+
+function openModal(service){
+
+    let data =
+    serviceData[service];
+
+    if(!data) return;
+
+
+    document
+    .getElementById("modalTitle")
+    .innerText =
+    data.title;
+
+
+    document
+    .getElementById("modalDescription")
+    .innerText =
+    data.description;
+
+
+    let list =
+    document
+    .getElementById("modalList");
+
+    list.innerHTML = "";
+
+
+    data.items.forEach(function(item){
+
+        let li =
+        document.createElement("li");
+
+        li.innerText = item;
+
+        list.appendChild(li);
+
+    });
+
+
+    document
+    .getElementById("serviceModal")
+    .classList
+    .add("active");
+
+}
+
+
+function closeModal(){
+
+    document
+    .getElementById("serviceModal")
+    .classList
+    .remove("active");
+
+}
+
+
+/* Close modal by clicking outside */
+
+document
+.getElementById("serviceModal")
+.addEventListener("click",function(e){
+
+    if(e.target === this){
+
+        closeModal();
+
+    }
+
+});
+
+
+/* =========================================================
+   WHATSAPP SERVICE REQUEST
+   ========================================================= */
+
+function sendWhatsApp(event){
+
+    event.preventDefault();
+
+
+    let name =
+    document
+    .getElementById("customerName")
+    .value;
+
+    let contact =
+    document
+    .getElementById("customerContact")
+    .value;
+
+    let service =
+    document
+    .getElementById("customerService")
+    .value;
+
+    let message =
+    document
+    .getElementById("customerMessage")
+    .value;
+
+
+    let whatsappMessage =
+
+`Hello Small Giant Inv CC 👋
+
+I would like to request a service.
+
+Name: ${name}
+
+My Contact:
+${contact}
+
+Service:
+${service}
+
+Request:
+${message}`;
+
+
+    let url =
+    "https://wa.me/264858151809?text="
+    +
+    encodeURIComponent(whatsappMessage);
+
+
+    window.open(url,"_blank");
+
+}
+
+
+/* =========================================================
+   SIMPLE SCROLL REVEAL
+   ========================================================= */
+
+const revealElements =
+document.querySelectorAll(
+".service-card,.why-card,.about-box,.division-main,.side-box"
+);
+
+
+const observer =
+new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},
+
+{
+threshold:.1
+}
+
+);
+
+
+revealElements.forEach(el=>{
+
+el.style.opacity="0";
+el.style.transform="translateY(25px)";
+el.style.transition="all .7s ease";
+
+observer.observe(el);
+
+});
+
+
+</script>
+
+</body>
+</html>
